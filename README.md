@@ -5,10 +5,10 @@ PyLambda is a simple hybrid lambda / Python expression evaluator.
 
 It evaluates lambda expressions by binding python arguments to its variables.
 Behind the scenes it actually converts a lambda expression into a python
-expression consisting of anonymous functions (defined using `lambda`.) and then
+expression consisting of anonymous functions (defined using `lambda`) and then
 combines it with the python arguments.
 
-For information on lambda expressions, see http://wikipedia.org/wiki/Lambda\_calculus.
+For information on lambda expressions, see http://wikipedia.org/wiki/Lambda_calculus.
 
 Usage
 -----
@@ -50,7 +50,7 @@ Prerequisites
 -------------
 PyLambda requires PLY 3.4, which must be installed prior to PyLambda installation.
 
-TODO
+ToDo
 ----
 Evaluation using normal order without requiring any explicit syntax.
 
