@@ -159,7 +159,7 @@ class LambdaInterpreter(code.InteractiveConsole):
         else:
             print "%s%s" % (s, t)
 
-    def interact(self, banner, verbose=False, debug=False):
+    def interact(self, verbose=False, debug=False):
         try:
             while True:
                 line = self.raw_input('$ ')
@@ -202,21 +202,19 @@ class LambdaInterpreter(code.InteractiveConsole):
         else:
             intr.dump_ast(result)
 
-def banner(full):
+def banner():
     sbanner = 'Lambda Interpreter v%s' % (__version__)
-    if full:
-        sbanner += " Copyright (c) 2014 Rory MacHale"
     return sbanner
 
 def interpret(args, verbose=False):
     logging.basicConfig(level = logging.DEBUG)
     cons = Parser()
     intr = LambdaInterpreter(cons)
-    print banner(False)
+    print banner()
     log = None
     if args.logger:
         log = logging.getLogger()
-    intr.interact(banner, verbose=verbose, debug=log)
+    intr.interact(verbose=verbose, debug=log)
 
 def main():
     import argparse
