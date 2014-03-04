@@ -34,7 +34,7 @@ Note the need to bracket each argument.
     3
 
 Lambda expressions are not particularly interesting unless at least one of the
-arguments passed in is a function (defined using lambda):
+arguments passed in is a function (defined using `lambda`):
 
     Lf.(Lx.x x)(Lx.Lv.(f x x)v):(lambda f:(lambda n:1 if n==0 else n*f(n-1)))(5)
     120
